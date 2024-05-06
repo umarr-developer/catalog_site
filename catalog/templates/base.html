@@ -2,11 +2,40 @@
 
 <!doctype html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <title>Main Page</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
+<div class="wrapper">
+    <div class="navbar">
+        <div class="content">
+            <div class="navbar_body">
+                <div class="logo">
+                    <a href="#">
+                        <img src="{% static 'svg/laptop.svg' %}" alt="laptop">
+                        <span>Catalog</span>
+                    </a>
+                </div>
+                <div class="categories">
+                    <a href="#">
+                        <div class="category">
+                            <span>Apple</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="actions">
+                    <div class="action">
+                        <a href="#">
+                            <img src="{% static 'svg/person-circle.svg' %}" alt="person-sircle">
+                            <span>Вход</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

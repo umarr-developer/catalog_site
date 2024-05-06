@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -63,6 +64,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
   text-decoration: none;
+  color: #000;
 }
 
 a:hover {
@@ -99,9 +101,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   max-width: 100%;
   min-height: 100%;
 }
@@ -119,5 +118,46 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 12px 0;
+  padding: 18px 0;
+}
+.wrapper .navbar_body .logo span {
+  font-family: Orbitron, sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.wrapper .navbar_body .logo img {
+  width: 24px;
+  height: 26px;
+  margin-right: 8px;
+}
+.wrapper .navbar_body .categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 6px 0;
+}
+.wrapper .navbar_body .categories .category span {
+  margin: 0 8px;
+  font-size: 14px;
+}
+.wrapper .navbar_body .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 0;
+}
+.wrapper .navbar_body .actions .action span {
+  margin: 0 8px;
+  font-size: 16px;
+}
+.wrapper .navbar_body .actions .action img {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
 }
