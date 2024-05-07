@@ -21,6 +21,7 @@ body {
         width: 100%;
         background: #ffffffaa;
         backdrop-filter: blur(6px);
+        border-bottom: 1px solid #9ca3af;
 
         &_body {
             display: flex;
@@ -32,6 +33,7 @@ body {
                 background: #818cf8;
                 border-radius: 8px;
                 transition-duration: 0.25s;
+
                 span {
                     font-family: Orbitron, sans-serif;
                     font-size: 20px;
@@ -40,9 +42,10 @@ body {
                     color: #fff;
                 }
 
-                &:hover{
+                &:hover {
                     background: #fff;
-                    span{
+
+                    span {
                         color: #818cf8;
                     }
                 }
@@ -55,8 +58,8 @@ body {
                 padding: 6px 0;
 
                 .category {
-                    padding: 0 12px;
-                    margin: 0 4px;
+                    padding: 2px 12px;
+                    margin: 0 6px;
                     transition-duration: 0.25s;
 
                     span {
@@ -65,13 +68,45 @@ body {
                         color: #6b7280;
                     }
 
-                    img{
+                    img {
                         width: 14px;
                         height: 14px;
                     }
-                    &:hover{
+
+                    &:hover {
                         transform: scale(1.25);
                     }
+
+                    &:active {
+                        transform: scale(0.75);
+                    }
+                }
+            }
+
+            .search {
+                padding: 6px 8px;
+                border: 1px solid #9ca3af;
+                border-radius: 6px;
+                transition-duration: 0.25s;
+
+                input {
+                    font-size: 14px;
+                    color: #6b7280;
+                    padding: 0 8px;
+                }
+
+                button{
+                    background: #ffffffff;
+                    opacity: 60%;
+                    transition-duration: 0.25s;
+
+                    &:hover{
+                        opacity: 100%;
+                    }
+                }
+
+                &:has(input:focus) {
+                    border-color: #000;
                 }
             }
 
@@ -86,7 +121,7 @@ body {
                     transition-duration: 0.25s;
 
                     span {
-                        font-size: 14px;
+                        font-size: 12px;
                         text-transform: uppercase;
                         color: #6b7280;
                     }
@@ -97,7 +132,7 @@ body {
                         margin-right: 4px;
                     }
 
-                    &:hover{
+                    &:hover {
                         border-color: #818cf8;
                     }
                 }
