@@ -109,7 +109,11 @@ body {
   margin: auto;
 }
 .wrapper .navbar {
-  background: #eee;
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6666666667);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
 .wrapper .navbar_body {
   display: -webkit-box;
@@ -120,15 +124,25 @@ body {
           justify-content: space-between;
   padding: 18px 0;
 }
+.wrapper .navbar_body .logo {
+  padding: 4px 12px;
+  background: #818cf8;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
 .wrapper .navbar_body .logo span {
   font-family: Orbitron, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 500;
   text-transform: uppercase;
+  color: #fff;
 }
-.wrapper .navbar_body .logo img {
-  width: 24px;
-  height: 26px;
-  margin-right: 8px;
+.wrapper .navbar_body .logo:hover {
+  background: #fff;
+}
+.wrapper .navbar_body .logo:hover span {
+  color: #818cf8;
 }
 .wrapper .navbar_body .categories {
   display: -webkit-box;
@@ -139,9 +153,24 @@ body {
           justify-content: space-between;
   padding: 6px 0;
 }
+.wrapper .navbar_body .categories .category {
+  padding: 0 12px;
+  margin: 0 4px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
 .wrapper .navbar_body .categories .category span {
-  margin: 0 8px;
-  font-size: 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+.wrapper .navbar_body .categories .category img {
+  width: 14px;
+  height: 14px;
+}
+.wrapper .navbar_body .categories .category:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 .wrapper .navbar_body .actions {
   display: -webkit-box;
@@ -150,14 +179,24 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5px 0;
+}
+.wrapper .navbar_body .actions .action {
+  padding: 6px 8px;
+  border: 2px solid #4b5563;
+  border-radius: 6px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
 }
 .wrapper .navbar_body .actions .action span {
-  margin: 0 8px;
-  font-size: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #6b7280;
 }
 .wrapper .navbar_body .actions .action img {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   margin-right: 4px;
+}
+.wrapper .navbar_body .actions .action:hover {
+  border-color: #818cf8;
 }
