@@ -8,6 +8,7 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     max-width: 100%;
     min-height: 100%;
 
@@ -19,9 +20,10 @@ body {
     .navbar {
         position: fixed;
         width: 100%;
-        background: #ffffffaa;
-        backdrop-filter: blur(6px);
+        background: #ffffff66;
+        backdrop-filter: blur(12px);
         border-bottom: 1px solid #9ca3af;
+        z-index: 10;
 
         &_body {
             display: flex;
@@ -84,6 +86,7 @@ body {
                 border: 1px solid #9ca3af;
                 border-radius: 6px;
                 transition-duration: 0.25s;
+                background: #ffffff;
 
                 input {
                     font-size: 14px;
@@ -91,12 +94,12 @@ body {
                     padding: 0 8px;
                 }
 
-                button{
-                    background: #ffffffff;
+                button {
                     opacity: 60%;
                     transition-duration: 0.25s;
+                    background: #fff;
 
-                    &:hover{
+                    &:hover {
                         opacity: 100%;
                     }
                 }
@@ -115,6 +118,7 @@ body {
                     border: 2px solid #4b5563;
                     border-radius: 6px;
                     transition-duration: 0.25s;
+                    background: #fff;
 
                     span {
                         font-size: 12px;
@@ -133,5 +137,10 @@ body {
                 }
             }
         }
+    }
+
+    .middle {
+        position: relative;
+        top: 72px;
     }
 }
