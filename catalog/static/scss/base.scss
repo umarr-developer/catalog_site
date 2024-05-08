@@ -143,4 +143,36 @@ body {
         position: relative;
         top: 72px;
     }
+
+    .footer{
+        margin-top: 72px;
+        z-index: 5;
+        background: #27272a;
+
+        &_body{
+            display: flex;
+            padding: 24px 0;
+
+            .column{
+                margin-right: 48px;
+                .element{
+                    margin: 12px 0;
+                    color: #fff;
+                    opacity: 60%;
+                    transition-duration: 0.25s;
+                    img{
+                        width: 14px;
+                        height: 14px;
+                        margin-right: 4px;
+                    }
+                    span{
+                        font-size: 14px;
+                    }
+                    &:hover{
+                        opacity: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
