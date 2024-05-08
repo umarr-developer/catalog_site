@@ -159,23 +159,18 @@ body {
   margin: 0 6px;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
+  opacity: 60%;
 }
 .wrapper .navbar_body .categories .category span {
   font-size: 12px;
   text-transform: uppercase;
-  color: #6b7280;
 }
 .wrapper .navbar_body .categories .category img {
   width: 14px;
   height: 14px;
 }
 .wrapper .navbar_body .categories .category:hover {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-}
-.wrapper .navbar_body .categories .category:active {
-  -webkit-transform: scale(0.75);
-          transform: scale(0.75);
+  opacity: 100%;
 }
 .wrapper .navbar_body .search {
   padding: 6px 8px;
@@ -219,7 +214,6 @@ body {
 .wrapper .navbar_body .actions .action span {
   font-size: 12px;
   text-transform: uppercase;
-  color: #6b7280;
 }
 .wrapper .navbar_body .actions .action img {
   width: 14px;

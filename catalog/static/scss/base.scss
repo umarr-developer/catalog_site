@@ -61,11 +61,11 @@ body {
                     padding: 2px 12px;
                     margin: 0 6px;
                     transition-duration: 0.25s;
+                    opacity: 60%;
 
                     span {
                         font-size: 12px;
                         text-transform: uppercase;
-                        color: #6b7280;
                     }
 
                     img {
@@ -74,11 +74,7 @@ body {
                     }
 
                     &:hover {
-                        transform: scale(1.25);
-                    }
-
-                    &:active {
-                        transform: scale(0.75);
+                        opacity: 100%;
                     }
                 }
             }
@@ -123,7 +119,6 @@ body {
                     span {
                         font-size: 12px;
                         text-transform: uppercase;
-                        color: #6b7280;
                     }
 
                     img {
