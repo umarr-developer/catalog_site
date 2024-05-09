@@ -151,10 +151,15 @@ body {
 
         &_body{
             display: flex;
+            justify-content: space-around;
             padding: 24px 0;
 
             .column{
-                margin-right: 48px;
+                .title_element{
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin-bottom: 24px;
+                }
                 .element{
                     margin: 12px 0;
                     color: #fff;

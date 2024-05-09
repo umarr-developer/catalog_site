@@ -242,10 +242,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 24px 0;
 }
-.wrapper .footer_body .column {
-  margin-right: 48px;
+.wrapper .footer_body .column .title_element {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 }
 .wrapper .footer_body .column .element {
   margin: 12px 0;
