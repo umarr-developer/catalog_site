@@ -20,8 +20,8 @@ body {
     .navbar {
         position: fixed;
         width: 100%;
-        background: #ffffff66;
-        backdrop-filter: blur(12px);
+        background: #ffffff99;
+        backdrop-filter: blur(24px) saturate(0.7);
         border-bottom: 1px solid #9ca3af;
         z-index: 10;
 
