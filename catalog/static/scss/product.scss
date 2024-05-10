@@ -1,0 +1,47 @@
+.product_block {
+    margin: 24px 0;
+    
+    .block_title{
+        margin-bottom: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        
+    }
+    .products_row {
+        display: flex;
+        flex-wrap: wrap;
+        .product {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            margin-right: 24px;
+            padding: 12px 20px;
+            border-radius: 6px;
+            background: #fff;
+            filter: brightness(0.95) saturate(0.9);
+            transition-duration: 0.15s;
+
+            .image {
+                img {
+                    width: 160px;
+                }
+            }
+
+            .name {
+                text-transform: uppercase;
+                font-weight: 600;
+                text-align: center;
+
+                span {
+                    color: #374151;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                filter: brightness(1) saturate(1);
+            }
+        }
+    }
+
+}
