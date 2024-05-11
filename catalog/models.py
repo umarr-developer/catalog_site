@@ -6,6 +6,9 @@ class Brand(models.Model):
     name = models.CharField(max_length=128)
     slug = models.SlugField(unique=True)
 
+    def __str__(self):
+        return self.name
+
 
 class LaptopProduct(models.Model):
     id = models.AutoField(primary_key=True)
