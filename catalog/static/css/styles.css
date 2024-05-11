@@ -294,6 +294,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 200px;
+  height: 280px;
   margin-right: 24px;
   margin-bottom: 48px;
   padding: 12px 20px;
@@ -304,8 +305,12 @@ body {
   -webkit-transition-duration: 0.15s;
           transition-duration: 0.15s;
 }
+.product_block .products_row .product .image {
+  height: 140px;
+  width: auto;
+}
 .product_block .products_row .product .image img {
-  width: 160px;
+  width: 100%;
 }
 .product_block .products_row .product .name {
   text-transform: uppercase;
@@ -327,7 +332,7 @@ body {
   margin-right: 6px;
 }
 .product_block .products_row .product .information .row span {
-  font-size: 12px;
+  font-size: 11px;
   color: #6b7280;
 }
 .product_block .products_row .product:hover {
