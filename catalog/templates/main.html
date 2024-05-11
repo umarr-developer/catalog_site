@@ -1,5 +1,54 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-text
+    <div class="product_block">
+        <div class="block_title">
+        <span>
+            Новые
+        </span>
+        </div>
+        <div class="products_row">
+            {% for product in new_products %}
+                <a href="#">
+                    <div class="product">
+                        <div class="image">
+                            <img src="{% static 'png/test.png' %}" alt="test">
+                        </div>
+                        <div class="name">
+                    <span>
+                        {{ product.name }}
+                    </span>
+                        </div>
+                        <div class="information">
+                            <div class="row">
+                                <img src="{% static 'svg/cpu.svg' %}" alt="cpu">
+                                <span>
+                                    {{ product.cpu }}
+                                </span>
+                            </div>
+                            <div class="row">
+                                <img src="{% static 'svg/gpu-card.svg' %}" alt="cpu">
+                                <span>
+                                    {{ product.gpu }}
+                                </span>
+                            </div>
+                            <div class="row">
+                                <img src="{% static 'svg/memory.svg' %}" alt="cpu">
+                                <span>
+                                    {{ product.ram }}
+                                </span>
+                            </div>
+                            <div class="row">
+                                <img src="{% static 'svg/sd-card.svg' %}" alt="cpu">
+                                <span>
+                                    {{ product.memory }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+
+        </div>
+    </div>
 {% endblock content %}
