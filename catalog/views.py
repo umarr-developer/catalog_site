@@ -10,3 +10,8 @@ class MainPageView(generic.TemplateView):
         context = super().get_context_data(**kwargs)
         context['new_products'] = LaptopProduct.objects.all().order_by('create_on')[:4:]
         return context
+
+
+class ProductPageView(generic.DetailView):
+    model = LaptopProduct
+    template_name = 'product.html'

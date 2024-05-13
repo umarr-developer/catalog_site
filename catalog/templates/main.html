@@ -9,7 +9,7 @@
         </div>
         <div class="products_row">
             {% for product in new_products %}
-                <a href="#">
+                <a href="{% url 'product_view' product.slug %}">
                     <div class="product">
                         <div class="image">
                             <img src="{% static product.image %}" alt="test">
