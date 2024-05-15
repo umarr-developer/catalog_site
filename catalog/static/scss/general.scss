@@ -1,0 +1,20 @@
+.page_center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0;
+}
+
+.big_icon{
+    display: block;
+    width: 96px;
+    height: 96px;
+}
+
+.big_alert_text{
+    display: block;
+    margin: 24px 0;
+    font-size: 24px;
+    color: #374151;
+}

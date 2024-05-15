@@ -341,3 +341,33 @@ body {
   -webkit-filter: brightness(1) saturate(1);
           filter: brightness(1) saturate(1);
 }
+
+.page_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10% 0;
+}
+
+.big_icon {
+  display: block;
+  width: 96px;
+  height: 96px;
+}
+
+.big_alert_text {
+  display: block;
+  margin: 24px 0;
+  font-size: 24px;
+  color: #374151;
+}
