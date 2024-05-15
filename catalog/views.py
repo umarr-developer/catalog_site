@@ -15,3 +15,7 @@ class MainPageView(generic.TemplateView):
 class ProductPageView(generic.DetailView):
     model = LaptopProduct
     template_name = 'product.html'
+
+
+class InProgress(generic.TemplateView):
+    template_name = 'in_progress.html'
