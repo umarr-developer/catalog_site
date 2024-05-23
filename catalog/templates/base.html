@@ -47,12 +47,10 @@
                     </form>
                 </div>
                 <div class="actions">
-                    <a href="{% url 'in_progress' %}">
-                        <div class="action">
-                            <img src="{% static 'svg/person-fill.svg' %}" alt="person-sircle">
-                            <span>Вход</span>
-                        </div>
-                    </a>
+                    <div class="action" id="register">
+                        <img src="{% static 'svg/person-fill.svg' %}" alt="person-sircle">
+                        <span>Вход</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -200,6 +198,47 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="modal" id="modal">
+    <div class="inner_modal" id="inner_modal">
+        <form action="">
+            <div class="close_button">
+                <img src="{% static 'svg/x-lg.svg' %}" alt="" id="close">
+            </div>
+            <div class="input_block">
+                <label for="username">
+                    <img src="{% static 'svg/person-circle.svg' %}" alt="">
+                    Имя пользователя
+                </label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="input_block">
+                <label for="email">
+                    <img src="{% static 'svg/envelope.svg' %}" alt="">
+                    Эл. почта
+                </label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="input_block">
+                <label for="password">
+                    <img src="{% static 'svg/key-fill.svg' %}" alt="">
+                    Пароль
+                </label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="input_block">
+                <label for="repeat_password">
+                    <img src="{% static 'svg/key-fill.svg' %}" alt="">
+                    Повторите пароль
+                </label>
+                <input type="password" name="repeat_password" id="repeat_password">
+            </div>
+            <div class="button_block">
+                <button type="submit">Регистрация</button>
+            </div>
+        </form>
     </div>
 </div>
 
