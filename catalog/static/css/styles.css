@@ -209,19 +209,20 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  cursor: pointer;
 }
 .wrapper .navbar_body .actions .action {
   padding: 8px 8px;
-  border: 2px solid #4b5563;
-  border-radius: 6px;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
   background: #fff;
 }
 .wrapper .navbar_body .actions .action span {
   font-size: 12px;
+  cursor: pointer;
   text-transform: uppercase;
+}
+.wrapper .navbar_body .actions .action span:hover {
+  color: #84cc16;
 }
 .wrapper .navbar_body .actions .action img {
   width: 14px;
@@ -374,7 +375,7 @@ body {
   color: #374151;
 }
 
-.modal {
+.form_modal {
   display: none;
   position: fixed;
   left: 0;
@@ -387,7 +388,7 @@ body {
   -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
 }
-.modal .inner_modal {
+.form_modal .inner_modal {
   width: 360px;
   margin: auto;
   padding: 12px 24px;
@@ -396,7 +397,7 @@ body {
   -webkit-box-shadow: 5px 6px 11px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 5px 6px 11px 0 rgba(0, 0, 0, 0.4);
 }
-.modal .inner_modal .close_button {
+.form_modal .inner_modal .close_button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,7 +407,7 @@ body {
   margin-bottom: 12px;
   cursor: pointer;
 }
-.modal .inner_modal .close_button img {
+.form_modal .inner_modal .close_button img {
   position: relative;
   left: 12px;
   padding: 4px;
@@ -414,22 +415,22 @@ body {
   -webkit-transition-duration: 0.15s;
           transition-duration: 0.15s;
 }
-.modal .inner_modal .close_button img:hover {
+.form_modal .inner_modal .close_button img:hover {
   background: #f43f5e;
 }
-.modal .inner_modal .input_block {
+.form_modal .inner_modal .input_block {
   margin-bottom: 24px;
 }
-.modal .inner_modal .input_block label {
+.form_modal .inner_modal .input_block label {
   display: block;
   font-size: 12px;
 }
-.modal .inner_modal .input_block label img {
+.form_modal .inner_modal .input_block label img {
   width: 12px;
   height: 12px;
   margin-right: 4px;
 }
-.modal .inner_modal .input_block input {
+.form_modal .inner_modal .input_block input {
   display: block;
   width: 100%;
   margin-top: 6px;
@@ -440,13 +441,13 @@ body {
   -webkit-transition-duration: 0.15s;
           transition-duration: 0.15s;
 }
-.modal .inner_modal .input_block input:focus {
+.form_modal .inner_modal .input_block input:focus {
   outline: 3px solid rgba(132, 204, 22, 0.5333333333);
 }
-.modal .inner_modal .button_block {
+.form_modal .inner_modal .button_block {
   margin-top: 48px;
 }
-.modal .inner_modal .button_block button {
+.form_modal .inner_modal .button_block button {
   width: 100%;
   padding: 8px 24px;
   border-radius: 6px;
@@ -455,7 +456,7 @@ body {
   -webkit-transition-duration: 0.15s;
           transition-duration: 0.15s;
 }
-.modal .inner_modal .button_block button:hover {
+.form_modal .inner_modal .button_block button:hover {
   background: #84cc16;
   color: #fff;
 }

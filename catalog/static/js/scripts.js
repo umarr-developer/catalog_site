@@ -1,13 +1,25 @@
-const modal = document.getElementById("modal");
+const auth_modal = document.getElementById("auth_modal");
+const auth_button = document.getElementById("auth_button");
+const auth_close = document.getElementById("auth_close")
 
-const button = document.getElementById("register");
+const reg_modal = document.getElementById("reg_modal");
+const reg_button = document.getElementById("reg_button");
+const reg_close = document.getElementById("reg_close")
 
-const close = document.getElementById("close")
 
-button.onclick = function () {
-    modal.style.display = "block";
+auth_button.onclick = function () {
+    auth_modal.style.display = "block";
 }
 
-close.onclick = function () {
-    modal.style.display = "none";
+auth_close.onclick = function () {
+    auth_modal.style.display = "none";
+}
+
+
+reg_button.onclick = function (){
+    reg_modal.style.display = "block";
+}
+
+reg_close.onclick = function () {
+    reg_modal.style.display = "none";
 }

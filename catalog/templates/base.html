@@ -1,4 +1,4 @@
-{% load static %}
+1{% load static %}
 
 <!doctype html>
 <html lang="ru">
@@ -47,10 +47,11 @@
                     </form>
                 </div>
                 <div class="actions">
-                    <div class="action" id="register">
+                    <div class="action" id="auth_button">
                         <img src="{% static 'svg/person-fill.svg' %}" alt="person-sircle">
-                        <span>Вход</span>
-                    </div>
+                        <span id="auth_button">Вход</span>
+                        <span> | </span>
+                        <span id="reg_button">Регистрация</span>
                 </div>
             </div>
         </div>
@@ -201,11 +202,38 @@
     </div>
 </div>
 
-<div class="modal" id="modal">
+
+<div class="form_modal" id="auth_modal">
     <div class="inner_modal" id="inner_modal">
         <form action="">
             <div class="close_button">
-                <img src="{% static 'svg/x-lg.svg' %}" alt="" id="close">
+                <img src="{% static 'svg/x-lg.svg' %}" alt="" id="auth_close">
+            </div>
+            <div class="input_block">
+                <label for="username">
+                    <img src="{% static 'svg/person-circle.svg' %}" alt="">
+                    Имя пользователя
+                </label>
+                <input type="text" name="username" id="auth_username" placeholder="username">
+            </div>
+            <div class="input_block">
+                <label for="password">
+                    <img src="{% static 'svg/key-fill.svg' %}" alt="">
+                    Пароль
+                </label>
+                <input type="password" name="password" id="auth_password" placeholder="password">
+            </div>
+            <div class="button_block">
+                <button type="submit">Регистрация</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="form_modal" id="reg_modal">
+    <div class="inner_modal" id="inner_modal">
+        <form action="">
+            <div class="close_button">
+                <img src="{% static 'svg/x-lg.svg' %}" alt="" id="reg_close">
             </div>
             <div class="input_block">
                 <label for="username">
