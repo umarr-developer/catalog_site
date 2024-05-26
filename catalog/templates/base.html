@@ -2,246 +2,274 @@
 
 <!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Main Page</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="shortcut icon" href="{% static 'svg/site_icon.svg' %}" type="image/x-icon">
-</head>
-<body>
-<div class="wrapper">
-    <div class="navbar">
-        <div class="content">
-            <div class="navbar_body">
-                <div class="logo">
-                    <a href="{% url 'main_page' %}">
-                        <span>Catalog</span>
-                    </a>
-                </div>
-                <div class="categories">
-                    <div class="category">
-                        <a href="{% url 'in_progress' %}">
-                            <img src="{% static 'svg/laptop.svg' %}" alt="">
-                            <span>Ноутбуки</span>
-                        </a>
+    <head>
+        <meta charset="UTF-8">
+        <title>Main Page</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="shortcut icon" href="{% static 'svg/site_icon.svg' %}" type="image/x-icon">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="navbar">
+                <div class="content">
+                    <div class="navbar_body">
+                        <div class="logo">
+                            <a href="{% url 'main_page' %}">
+                                <span>Catalog</span>
+                            </a>
+                        </div>
+                        <div class="categories">
+                            <div class="category">
+                                <a href="{% url 'in_progress' %}">
+                                    <img src="{% static 'svg/laptop.svg' %}" alt="">
+                                    <span>Ноутбуки</span>
+                                </a>
+                            </div>
+                            <div class="category">
+                                <a href="{% url 'in_progress' %}">
+                                    <img src="{% static 'svg/phone.svg' %}" alt="">
+                                    <span>Смартфоны</span>
+                                </a>
+                            </div>
+                            <div class="category">
+                                <a href="{% url 'in_progress' %}">
+                                    <img src="{% static 'svg/headset.svg' %}" alt="">
+                                    <span>Аксессуары</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="search">
+                            <form action="">
+                                <input type="text" placeholder="Поиск">
+                                <button type="submit">
+                                    <img src="{% static 'svg/search.svg' %}" alt="">
+                                </button>
+                            </form>
+                        </div>
+                        <div class="actions">
+                            <div class="action">
+                                <img src="{% static 'svg/person-fill.svg' %}" alt="person-sircle">
+                                <span id="auth_button">Вход</span>
+                                <span> | </span>
+                                <span id="reg_button">Регистрация</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="category">
-                        <a href="{% url 'in_progress' %}">
-                            <img src="{% static 'svg/phone.svg' %}" alt="">
-                            <span>Смартфоны</span>
-                        </a>
-                    </div>
-                    <div class="category">
-                        <a href="{% url 'in_progress' %}">
-                            <img src="{% static 'svg/headset.svg' %}" alt="">
-                            <span>Аксессуары</span>
-                        </a>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="content">
+                    <div class="middle_body">
+                        {% block content %}
+                        {% endblock content %}
                     </div>
                 </div>
-                <div class="search">
-                    <form action="">
-                        <input type="text" placeholder="Поиск">
-                        <button type="submit">
-                            <img src="{% static 'svg/search.svg' %}" alt="">
-                        </button>
-                    </form>
-                </div>
-                <div class="actions">
-                    <div class="action" id="register">
-                        <img src="{% static 'svg/person-fill.svg' %}" alt="person-sircle">
-                        <span>Вход</span>
+            </div>
+            <div class="footer">
+                <div class="content">
+                    <div class="footer_body">
+                        <div class="column">
+                            <div class="title_element">
+                                <span>
+                                    Контакты
+                                </span>
+                            </div>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <span>
+                                        Тех. поддержка
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <span>
+                                        test.catalog.site@mail.su
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <span>
+                                        +996 000 00 00 00
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column">
+                            <div class="title_element">
+                                <span>
+                                    Бренды
+                                </span>
+                            </div>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <span>
+                                        Apple
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <span>
+                                        HP
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <span>
+                                        Huawei
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <span>
+                                        Honor
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column">
+                            <div class="title_element">
+                                <span>
+                                    О сайте
+                                </span>
+                            </div>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <span>
+                                        Магазины
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <span>
+                                        Новости
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <span>
+                                        Для разработчиков
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column">
+                            <div class="title_element">
+                                <span>
+                                    Социальные сети
+                                </span>
+                            </div>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <img src="{% static 'svg/youtube.svg' %}" alt="youtube">
+                                    <span>
+                                        YouTube
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <img src="{% static 'svg/instagram.svg' %}" alt="instagram">
+                                    <span>
+                                        Instagram
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <img src="{% static 'svg/telegram.svg' %}" alt="telegram">
+                                    <span>
+                                        Telegram
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="{% url 'in_progress' %}">
+                                <div class="element">
+                                    <img src="{% static 'svg/vk.svg' %}" alt="vk">
+                                    <span>
+                                        VK
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="middle">
-        <div class="content">
-            <div class="middle_body">
-                {% block content %}
-                {% endblock content %}
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="content">
-            <div class="footer_body">
-                <div class="column">
-                    <div class="title_element">
-                        <span>
-                            Контакты
-                        </span>
-                    </div>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <span>
-                                Тех. поддержка
-                            </span>
-                        </div>
-                    </a>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <span>
-                                test.catalog.site@mail.su
-                            </span>
-                        </div>
-                    </a>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <span>
-                                +996 000 00 00 00
-                            </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <div class="title_element">
-                        <span>
-                            Бренды
-                        </span>
-                    </div>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <span>
-                                Apple
-                            </span>
-                        </div>
-                    </a>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <span>
-                                HP
-                            </span>
-                        </div>
-                    </a>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <span>
-                                Huawei
-                            </span>
-                        </div>
-                    </a>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <span>
-                                Honor
-                            </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <div class="title_element">
-                        <span>
-                            О сайте
-                        </span>
-                    </div>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <span>
-                                Магазины
-                            </span>
-                        </div>
-                    </a>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <span>
-                                Новости
-                            </span>
-                        </div>
-                    </a>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <span>
-                                Для разработчиков
-                            </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <div class="title_element">
-                        <span>
-                            Социальные сети
-                        </span>
-                    </div>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <img src="{% static 'svg/youtube.svg' %}" alt="youtube">
-                            <span>
-                                YouTube
-                            </span>
-                        </div>
-                    </a>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <img src="{% static 'svg/instagram.svg' %}" alt="instagram">
-                            <span>
-                                Instagram
-                            </span>
-                        </div>
-                    </a>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <img src="{% static 'svg/telegram.svg' %}" alt="telegram">
-                            <span>
-                                Telegram
-                            </span>
-                        </div>
-                    </a>
-                    <a href="{% url 'in_progress' %}">
-                        <div class="element">
-                            <img src="{% static 'svg/vk.svg' %}" alt="vk">
-                            <span>
-                                VK
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal" id="modal">
-    <div class="inner_modal" id="inner_modal">
-        <form action="">
-            <div class="close_button">
-                <img src="{% static 'svg/x-lg.svg' %}" alt="" id="close">
+        <div class="form_modal" id="reg_form">
+            <div class="inner_modal" id="inner_modal">
+                <form action="">
+                    <div class="close_button">
+                        <img src="{% static 'svg/x-lg.svg' %}" alt="" id="reg_close">
+                    </div>
+                    <div class="input_block">
+                        <label for="username">
+                            <img src="{% static 'svg/person-circle.svg' %}" alt="">
+                            Имя пользователя
+                        </label>
+                        <input type="text" name="username" id="username" placeholder="username">
+                    </div>
+                    <div class="input_block">
+                        <label for="email">
+                            <img src="{% static 'svg/envelope.svg' %}" alt="">
+                            Эл. почта
+                        </label>
+                        <input type="email" name="email" id="email" placeholder="e-mail">
+                    </div>
+                    <div class="input_block">
+                        <label for="password">
+                            <img src="{% static 'svg/key-fill.svg' %}" alt="">
+                            Пароль
+                        </label>
+                        <input type="password" name="password" id="password" placeholder="password">
+                    </div>
+                    <div class="input_block">
+                        <label for="repeat_password">
+                            <img src="{% static 'svg/key-fill.svg' %}" alt="">
+                            Повторите пароль
+                        </label>
+                        <input type="password" name="repeat_password" id="repeat_password" placeholder="password">
+                    </div>
+                    <div class="button_block">
+                        <button type="submit">Регистрация</button>
+                    </div>
+                </form>
             </div>
-            <div class="input_block">
-                <label for="username">
-                    <img src="{% static 'svg/person-circle.svg' %}" alt="">
-                    Имя пользователя
-                </label>
-                <input type="text" name="username" id="username" placeholder="username">
+        </div>
+        <div class="form_modal" id="auth_form">
+            <div class="inner_modal" id="inner_modal">
+                <form action="">
+                    <div class="close_button">
+                        <img src="{% static 'svg/x-lg.svg' %}" alt="" id="auth_close">
+                    </div>
+                    <div class="input_block">
+                        <label for="auth_username">
+                            <img src="{% static 'svg/person-circle.svg' %}" alt="">
+                            Имя пользователя
+                        </label>
+                        <input type="text" name="username" id="auth_username" placeholder="username">
+                    </div>
+                    <div class="input_block">
+                        <label for="auth_password">
+                            <img src="{% static 'svg/key-fill.svg' %}" alt="">
+                            Пароль
+                        </label>
+                        <input type="password" name="password" id="auth_password" placeholder="password">
+                    </div>
+                    <div class="button_block">
+                        <button type="submit">Войти</button>
+                    </div>
+                </form>
             </div>
-            <div class="input_block">
-                <label for="email">
-                    <img src="{% static 'svg/envelope.svg' %}" alt="">
-                    Эл. почта
-                </label>
-                <input type="email" name="email" id="email" placeholder="e-mail">
-            </div>
-            <div class="input_block">
-                <label for="password">
-                    <img src="{% static 'svg/key-fill.svg' %}" alt="">
-                    Пароль
-                </label>
-                <input type="password" name="password" id="password" placeholder="password">
-            </div>
-            <div class="input_block">
-                <label for="repeat_password">
-                    <img src="{% static 'svg/key-fill.svg' %}" alt="">
-                    Повторите пароль
-                </label>
-                <input type="password" name="repeat_password" id="repeat_password" placeholder="password">
-            </div>
-            <div class="button_block">
-                <button type="submit">Регистрация</button>
-            </div>
-        </form>
-    </div>
-</div>
+        </div>
 
-<script src="{% static 'js/scripts.js' %}"></script>
-</body>
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
 </html>
