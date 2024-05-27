@@ -297,7 +297,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 200px;
-  height: 280px;
+  height: 300px;
   margin-right: 24px;
   margin-bottom: 48px;
   padding: 12px 20px;
@@ -337,6 +337,16 @@ body {
 .product_block .products_row .product .information .row span {
   font-size: 11px;
   color: #6b7280;
+}
+.product_block .products_row .product .price {
+  margin: 12px 0;
+  text-align: center;
+}
+.product_block .products_row .product .price span {
+  font-family: "Source Code Pro", monospace;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
 }
 .product_block .products_row .product:hover {
   -webkit-transform: scale(1.1);
