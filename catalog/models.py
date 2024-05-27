@@ -16,6 +16,7 @@ class Product(models.Model):
     brand = models.ForeignKey(Brand, on_delete=models.DO_NOTHING)
     description = models.TextField()
     image = models.FileField(upload_to='files/')
+    characteristic = models.JSONField()
     price = models.IntegerField(default=0)
     slug = models.SlugField(unique=True)
     create_on = models.DateField(auto_now_add=True)
