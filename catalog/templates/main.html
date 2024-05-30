@@ -20,30 +20,39 @@
                     </span>
                         </div>
                         <div class="information">
+                            {% if product.characteristic.cpu %}
                             <div class="row">
                                 <img src="{% static 'svg/cpu.svg' %}" alt="cpu">
                                 <span>
-                                    {{ product.cpu }}
+                                    {{ product.characteristic.cpu }}
                                 </span>
                             </div>
+                            {% endif %}
+                            {% if product.characteristic.gpu %}
                             <div class="row">
                                 <img src="{% static 'svg/gpu-card.svg' %}" alt="cpu">
                                 <span>
-                                    {{ product.gpu }}
+                                    {{ product.characteristic.gpu }}
                                 </span>
                             </div>
+                            {% endif %}
+                            {% if product.characteristic.ram %}
                             <div class="row">
                                 <img src="{% static 'svg/memory.svg' %}" alt="cpu">
                                 <span>
-                                    {{ product.ram }}
+                                    {{ product.characteristic.ram }}
                                 </span>
                             </div>
+                            {% endif %}
+                            {% if product.characteristic.memory %}
                             <div class="row">
                                 <img src="{% static 'svg/sd-card.svg' %}" alt="cpu">
                                 <span>
-                                    {{ product.memory }}
+                                    {{ product.characteristic.memory }}
                                 </span>
                             </div>
+                            {% endif %}
+
                         </div>
                         <div class="price">
                             <span>
