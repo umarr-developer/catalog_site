@@ -39,7 +39,7 @@
                             </div>
                         </div>
                         <div class="search">
-                            <form action="search/" method="get">
+                            <form action="{% url 'search' %}" method="get">
                                 <input type="text" placeholder="Поиск" name="value">
                                 <button type="submit">
                                     <img src="{% static 'svg/search.svg' %}" alt="">
