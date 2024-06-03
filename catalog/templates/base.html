@@ -39,20 +39,12 @@
                             </div>
                         </div>
                         <div class="search">
-                            <form action="">
-                                <input type="text" placeholder="Поиск">
+                            <form action="search/" method="get">
+                                <input type="text" placeholder="Поиск" name="value">
                                 <button type="submit">
                                     <img src="{% static 'svg/search.svg' %}" alt="">
                                 </button>
                             </form>
-                        </div>
-                        <div class="actions">
-                            <div class="action">
-                                <img src="{% static 'svg/person-fill.svg' %}" alt="person-sircle">
-                                <span id="auth_button">Вход</span>
-                                <span> | </span>
-                                <span id="reg_button">Регистрация</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,74 +194,5 @@
                 </div>
             </div>
         </div>
-
-        <div class="form_modal" id="reg_form">
-            <div class="inner_modal" id="inner_modal">
-                <form action="">
-                    <div class="close_button">
-                        <img src="{% static 'svg/x-lg.svg' %}" alt="" id="reg_close">
-                    </div>
-                    <div class="input_block">
-                        <label for="username">
-                            <img src="{% static 'svg/person-circle.svg' %}" alt="">
-                            Имя пользователя
-                        </label>
-                        <input type="text" name="username" id="username" placeholder="username">
-                    </div>
-                    <div class="input_block">
-                        <label for="email">
-                            <img src="{% static 'svg/envelope.svg' %}" alt="">
-                            Эл. почта
-                        </label>
-                        <input type="email" name="email" id="email" placeholder="e-mail">
-                    </div>
-                    <div class="input_block">
-                        <label for="password">
-                            <img src="{% static 'svg/key-fill.svg' %}" alt="">
-                            Пароль
-                        </label>
-                        <input type="password" name="password" id="password" placeholder="password">
-                    </div>
-                    <div class="input_block">
-                        <label for="repeat_password">
-                            <img src="{% static 'svg/key-fill.svg' %}" alt="">
-                            Повторите пароль
-                        </label>
-                        <input type="password" name="repeat_password" id="repeat_password" placeholder="password">
-                    </div>
-                    <div class="button_block">
-                        <button type="submit">Регистрация</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="form_modal" id="auth_form">
-            <div class="inner_modal" id="inner_modal">
-                <form action="">
-                    <div class="close_button">
-                        <img src="{% static 'svg/x-lg.svg' %}" alt="" id="auth_close">
-                    </div>
-                    <div class="input_block">
-                        <label for="auth_username">
-                            <img src="{% static 'svg/person-circle.svg' %}" alt="">
-                            Имя пользователя
-                        </label>
-                        <input type="text" name="username" id="auth_username" placeholder="username">
-                    </div>
-                    <div class="input_block">
-                        <label for="auth_password">
-                            <img src="{% static 'svg/key-fill.svg' %}" alt="">
-                            Пароль
-                        </label>
-                        <input type="password" name="password" id="auth_password" placeholder="password">
-                    </div>
-                    <div class="button_block">
-                        <button type="submit">Войти</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <script src="{% static 'js/scripts.js' %}"></script>
     </body>
 </html>
