@@ -36,5 +36,34 @@ class SearchPageView(generic.ListView):
         return render(request, self.template_name, context)
 
 
+class ProductLaptopPage(generic.ListView):
+    template_name = 'ptype.html'
+    model = Product
+    type = 'laptops'
+    queryset = Product.objects.filter(ptype__slug=type)
+    context_object_name = 'products_list'
+    extra_context = {'page': 'Ноутбуки 0'}
+
+
+
+class SmartPhonePageView(ProductLaptopPage):
+    type = 'smartphones'
+    extra_context = {'page': 'Смартфоны'}
+    template_name = 'ptype.html'
+    model = Product
+    queryset = Product.objects.filter(ptype__slug=type)
+    context_object_name = 'products_list'
+
+
+
+
+class AccessoriesPageView(ProductLaptopPage):
+    type = 'accessories'
+    extra_context = {'page': 'Акксессуары'}
+    template_name = 'ptype.html'
+    model = Product
+    queryset = Product.objects.filter(ptype__slug=type)
+    context_object_name = 'products_list'
+
 class InProgress(generic.TemplateView):
     template_name = 'in_progress.html'

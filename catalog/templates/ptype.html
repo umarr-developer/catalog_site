@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="product_block">
+        <div class="block_title">
+        <span>
+            {{ page }}
+        </span>
+        </div>
+        <div class="products_row">
+            {% for product in products_list %}
+                <a href="{% url 'product_view' product.slug %}">
+                    <div class="product">
+                        <div class="image">
+                            <img src="{% static product.image %}" alt="test">
+                        </div>
+                        <div class="name">
+                    <span>
+                        {{ product.name }}
+                    </span>
+                        </div>
+                        <div class="information">
+                            {% if product.characteristic.cpu %}
+                            <div class="row">
+                                <img src="{% static 'svg/cpu.svg' %}" alt="cpu">
+                                <span>
+                                    {{ product.characteristic.cpu }}
+                                </span>
+                            </div>
+                            {% endif %}
+                            {% if product.characteristic.gpu %}
+                            <div class="row">
+                                <img src="{% static 'svg/gpu-card.svg' %}" alt="cpu">
+                                <span>
+                                    {{ product.characteristic.gpu }}
+                                </span>
+                            </div>
+                            {% endif %}
+                            {% if product.characteristic.ram %}
+                            <div class="row">
+                                <img src="{% static 'svg/memory.svg' %}" alt="cpu">
+                                <span>
+                                    {{ product.characteristic.ram }}
+                                </span>
+                            </div>
+                            {% endif %}
+                            {% if product.characteristic.memory %}
+                            <div class="row">
+                                <img src="{% static 'svg/sd-card.svg' %}" alt="cpu">
+                                <span>
+                                    {{ product.characteristic.memory }}
+                                </span>
+                            </div>
+                            {% endif %}
+
+                        </div>
+                        <div class="price">
+                            <span>
+                                {{ product.price }} сом
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock content %}
